@@ -36,6 +36,7 @@ const checkForm = input => {
 
 const checkLength = (input, min) => {
 	if (input.value.length < min) {
+        //metoda slice(0,-1) usuwa ostatni znak, czyli ":"
 		showError(input, `${input.previousElementSibling.innerText.slice(0, -1)} składa się z minimum ${min} znaków`)
 	}
 }
@@ -57,6 +58,9 @@ const checkEmail = email => {
 	}
 }
 
+// funkcja pobiera wszystkie elementy z klasą "form__box"
+// iteruje te elementy i sprawdza czy zawierają klasę "error", jeśli tak to zwiększają zmienną "errorCount"
+// jeśli zmienna "errorCount" wynosi 0 to do elementu "popup" dodawana jest klasa "show-popup"
 const checkErrors = () => {
 	const allInputs = document.querySelectorAll('.form__box')
 	let errorCount = 0

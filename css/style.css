@@ -46,15 +46,15 @@ body {
   border: 1px solid rgb(197, 197, 197);
   border-radius: 5px;
 }
-.form__box .error input {
-  border: 1px solid rgb(0, 137, 250);
-  background-color: rgba(0, 137, 250, 0.1);
-}
 .form__error-text {
   margin: 0.5rem 0rem 0rem 1rem;
   font-size: 1.4rem;
   color: rgb(0, 137, 250);
   visibility: hidden;
+}
+.form__box.error input {
+  border: 1px solid rgb(0, 137, 250);
+  background-color: rgba(0, 137, 250, 0.1);
 }
 .form__box.error .form__error-text {
   visibility: visible;
